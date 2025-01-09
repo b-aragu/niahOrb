@@ -1,3 +1,4 @@
+require("dotenv").config(); // Load environment variables from .env file
 const express = require("express");
 const axios = require("axios");
 const app = express();
@@ -9,7 +10,7 @@ app.use(express.json()); // Middleware to parse JSON bodies
 
 // Endpoint to handle speech input and communicate with Groq API
 app.post("/send_to_groq", async (req, res) => {
-  const apiKey = "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"; // Groq API Key
+  const apiKey = process.env.GROK_API_KEY; // Groq API Key from .env file
   const apiUrl = "https://api.groq.com/openai/v1/chat/completions"; // Groq API URL
 
   const { speech } = req.body; // Get speech input from the request body
@@ -37,7 +38,7 @@ app.post("/send_to_groq", async (req, res) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`, // Use the provided API key for authentication
+          Authorization: `Bearer ${apiKey}`, // Use the API key from the .env file
         },
       }
     );
