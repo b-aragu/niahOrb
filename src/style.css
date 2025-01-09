@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Ailerons";
+  src: url("./fonts/subset-Ailerons-Regular.woff2") format("woff2"),
+    url("./fonts/subset-Ailerons-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #d1e8e4; /* Soft crystal blue background for selection */
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.experience {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #e6f9ff; /* Light blue background to complement the crystal blue theme */
+  touch-action: none;
+  overflow: hidden;
+}
+
+.credits {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #b2d8e6; /* Soft, light blue text for credits */
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+
+.credits a {
+  color: inherit;
+}
+
+.title {
+  position: absolute;
+  top: calc(50% - 14vmin / 2);
+  left: 0;
+  width: 100%;
+  color: #ecf6f6; /* Crystal blue text color */
+  font-size: 14vmin;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+  font-family: "Ailerons", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
