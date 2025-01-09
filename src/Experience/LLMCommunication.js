@@ -1,6 +1,6 @@
 export default class LLMCommunication {
   constructor() {
-    this.apiUrl = "http://localhost:3000/send_to_groq";
+    this.apiUrl = "https://niahorb.onrender.com/send_to_groq";
   }
 
   async sendToGroq(speech) {
